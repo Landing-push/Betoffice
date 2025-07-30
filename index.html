@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BetOffice - Premium Sports Betting & Casino</title>
+    <meta name="description" content="Join BetOffice for the ultimate sports betting and casino experience. Get up to 200% welcome bonus!">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #0a0a0a;
+            overflow-x: hidden;
+          
+        }
+
+        /* Animations */
+        @keyframes strokeColorChange {
+            0%, 100% { 
+                -webkit-text-stroke-color: white;
+                text-shadow: 0 0 20px #FFD700;
+            }
+            50% { 
+                -webkit-text-stroke-color: #FFDF00;
+                text-shadow: 0 0 30px #ff6200;
+            }
+        }
+
+      
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+ @keyframes glowPulse {
+            0%, 100% { 
+                box-shadow: 0 0 20px #ff6200, 0 0 40px #ff6200, 0 0 60px #ff6200;
+                transform: scale(1);
+            }
+            50% { 
+                box-shadow: 0 0 30px #ffa128, 0 0 60px #ffa128, 0 0 90px #ffa128;
+                transform: scale(1.05);
+            }
+        }
+
+      
+
+        @keyframes lineGlow {
+            0%, 100% { 
+                background: linear-gradient(90deg, #ff6200, #ffa128);
+                box-shadow: 0 0 10px #ff6200;
+            }
+            50% { 
+                background: linear-gradient(90deg, #ffa128, #ff6200);
+                box-shadow: 0 0 20px #ffa128;
+            }
+        }
+
+        /* Color Classes */
+        .primary-color { color: #ff6200; }
+        .secondary-color { color: #ffa128; }
+        .primary-bg-color { background-color: #ff6200; }
+        .secondary-bg-color { background-color: #ffa128; }
+
+        /* Header/Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #000C25;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 0;
+            transition: all 0.3s ease;
+        }
+
+       
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: #ffffff;
+            text-decoration: none;
+            text-shadow: 0 0 20px #ffa128;
+            font-style: italic;
+        }
+
+       
+       
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background-image: url('./images/chat-2.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            background-repeat: no-repeat;
+           
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6200, #ffa128);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+         
+        }
+
+        .hero-title {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            -webkit-text-stroke: 2px white;
+            color: transparent;
+            animation: strokeColorChange 3s infinite;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffa128;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px #ffa128;
+        }
+
+        .hero-description {
+            font-size: 1.3rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+           
+        }
+
+        /* Buttons */
+        .btn-primary {
+            background: linear-gradient(45deg, #ff6200, #ffa128);
+            color: white;
+            padding: 18px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: glowPulse;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 98, 0, 0.4);
+            color: white;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 18px 40px;
+            border: 2px solid #ffa128;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: borderColorChange 3s infinite;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(45deg, #ff6200, #ffa128);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Steps Section - Stepper Style */
+        .steps-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a2e 50%, #16213e 100%);
+            background-image: url('/placeholder.svg?height=800&width=1920');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .steps-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #000C25;
+             background: linear-gradient(135deg, #000C25 0%, #16213e 50%);
+;
+            z-index: 1;
+        }
+
+        .steps-section > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .steps-main-title {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 80px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+            line-height: 1.2;
+        }
+
+        .stepper-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        /* Stepper Line */
+        .stepper-line {
+            position: absolute;
+            top: 45px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6200, #ffa128, #ff6200);
+            border-radius: 2px;
+            z-index: 1;
+        }
+
+        .stepper-steps {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            z-index: 2;
+            
+           
+        }
+
+        .stepper-step {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            animation: fadeInUp 0.8s ease forwards;
+            opacity: 0;
+         
+        }
+
+       
+        /* Step Circle */
+        .step-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6200, #ffa128);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: white;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+            position: relative;
+            z-index: 3;
+            margin-bottom: 30px;
+            border: 4px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(255, 98, 0, 0.3);
+        }
+
+     
+
+        /* Step Content */
+        .step-content-stepper {
+            max-width: 280px;
+            padding: 0 15px;
+         
+           
+           
+        }
+
+        .step-title-stepper {
+            font-family: 'Orbitron', monospace;
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+            line-height: 1.3;
+        }
+
+        .step-description-stepper {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .step-btn-stepper {
+            font-size: 1rem;
+            padding: 12px 25px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: glowPulse 3s infinite;
+            border-radius: 25px;
+            font-weight: 600;
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            position: relative;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Orbitron', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6200, #ffa128);
+            border-radius: 2px;
+        }
+
+
+        /* Bonus Cards Section */
+        .bonus-section {
+            padding: 100px 0;
+            background: #0a0a0a;
+            position: relative;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .bonus-card {
+            background: linear-gradient(135deg, #14155d, #2a5298);
+            border-radius: 25px;
+            padding: 50px 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            min-height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .bonus-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(255, 98, 0, 0.3);
+        }
+
+        .bonus-ribbon {
+            position: absolute;
+            top: 25px;
+            right: -50px;
+            background: #ff6200;
+            color: white;
+            padding: 10px 60px;
+            transform: rotate(45deg);
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .bonus-ribbon.casino {
+            background: linear-gradient(45deg, #8e44ad, #9b59b6);
+        }
+
+        .bonus-ribbon.sports {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+        }
+
+        .bonus-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .bonus-amount {
+            font-family: 'Orbitron', monospace;
+            font-size: 4rem;
+            font-weight: 900;
+            color: #ffa128;
+            margin-bottom: 10px;
+            text-shadow: 0 0 30px #ffa128;
+            -webkit-text-stroke: 1px white;
+            animation: strokeColorChange 3s infinite;
+        }
+
+        .bonus-extra {
+            font-size: 1.5rem;
+            color: #ffa128;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+
+        .bonus-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #ff6200, #ffa128);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-family: 'Orbitron', monospace;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 10px;
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        .stat-item p {
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0a0a0a;
+            color: white;
+            padding: 60px 0 30px;
+            
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: #ffa128;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ffa128;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            max-width: 40px;
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+
+       
+        
+
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+           
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.8rem;
+            }
+
+            .section-title {
+                font-size: 2.2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            /* Stepper Mobile */
+            .steps-main-title {
+                font-size: 2.2rem;
+                margin-bottom: 60px;
+            }
+
+            .stepper-steps {
+                flex-direction: column;
+                align-items: center;
+                gap: 60px;
+            }
+
+            .stepper-line {
+                display: none;
+            }
+
+            .step-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 2rem;
+                margin-bottom: 25px;
+            }
+
+            .step-content-stepper {
+                max-width: 100%;
+                padding: 0 20px;
+               
+            }
+
+            .step-title-stepper {
+                font-size: 1.4rem;
+            }
+
+            .step-description-stepper {
+                font-size: 1rem;
+            }
+
+            .step-btn-stepper {
+                font-size: 0.9rem;
+                padding: 12px 20px;
+            }
+
+            
+        }
+
+        @media (max-width: 480px) {
+
+           
+            .hero-title {
+                font-size: 2rem;
+               
+            }
+
+            .bonus-amount {
+                font-size: 3rem;
+            }
+
+            .steps-main-title {
+                font-size: 1.8rem;
+                line-height: 1.3;
+            }
+
+            .step-circle {
+                width: 80px;
+                height: 80px;
+                font-size: 1.5rem;
+            }
+
+            .step-title-stepper {
+                font-size: 1.2rem;
+            }
+
+            .step-description-stepper {
+                font-size: 0.9rem;
+            }
+            .bonus-grid {
+        grid-template-columns: 1fr; /* One column only */
+    }
+        }
+
+        @media (max-width: 377px) {
+                .hero-content{
+
+                    padding-top: 90px;
+                }
+                .hero-section{
+                    padding-bottom: 10px;
+                }
+
+                
+}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">BETOFFICE</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge"> NEW: 200% WELCOME BONUS</div>
+            <h1 class="hero-title">ULTIMATE BETTING EXPERIENCE</h1>
+            <h2 class="hero-subtitle">₺37,500 + 500 FREESPINS + 500 FREEBET </h2>
+            <p class="hero-description">
+                Join the most trusted betting platform in Turkey. Experience premium sports betting and casino games with unmatched bonuses and instant payouts.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">Sign Up</a>
+                <a href="#" class="btn-secondary">Live Casino</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section - Stepper Style -->
+    <section class="steps-section" id="features">
+        <div class="container">
+            <h2 class="steps-main-title">DOUBLE YOUR BETTING WINNINGS INSTANTLY!</h2>
+            
+            <div class="stepper-container">
+                <div class="stepper-line"></div>
+                <div class="stepper-steps">
+                    <!-- Step 1 -->
+                    <div class="stepper-step">
+                        <div class="step-circle">1</div>
+                        <div class="step-content-stepper">
+                            <h3 class="step-title-stepper">Open an Account</h3>
+                            <p class="step-description-stepper">Welcome to Turkey's most profitable Live Betting and Casino Site! CLICK, Open an Account and Claim Your Free Bet!</p>
+                            <a href="#" class="btn-primary step-btn-stepper">Open an Account</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="stepper-step">
+                        <div class="step-circle">2</div>
+                        <div class="step-content-stepper">
+                            <h3 class="step-title-stepper">Get 100 TL Trial Bonus</h3>
+                            <p class="step-description-stepper">Get your 100 TL Trial Bonus and start exploring Betoffice.</p>
+                            <a href="#" class="btn-primary step-btn-stepper">GET MY BONUS</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="stepper-step">
+                        <div class="step-circle">3</div>
+                        <div class="step-content-stepper">
+                            <h3 class="step-title-stepper">Select the Bonus You Want</h3>
+                            <p class="step-description-stepper">Make Your First Investment and Get One of the Bonuses Instantly!</p>
+                            <a href="#" class="btn-primary step-btn-stepper">CHOOSE BONUS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Bonus Section -->
+    <section class="bonus-section" id="bonuses">
+        <div class="container">
+            <h2 class="section-title">Choose Your Bonus</h2>
+            <div class="bonus-grid">
+                <div class="bonus-card">
+                    <div class="bonus-ribbon casino">CASINO</div>
+                    <div class="bonus-title">200% WELCOME BONUS</div>
+                    <div class="bonus-amount">₺25,000</div>
+                    <div class="bonus-extra">+ 500 FREE SPINS</div>
+                    <div class="bonus-description">
+                        Get up to ₺25,000 bonus on your first casino deposit plus 500 free spins on premium slots. Start your casino journey with maximum rewards!
+                    </div>
+                    <a href="#" class="btn-primary">Claim Casino Bonus</a>
+                </div>
+                <div class="bonus-card">
+                    <div class="bonus-ribbon sports">SPORTS</div>
+                    <div class="bonus-title">200% WELCOME BONUS</div>
+                    <div class="bonus-amount">₺12,500</div>
+                    <div class="bonus-extra">+ 500 FREE BETS</div>
+                    <div class="bonus-description">
+                        Double your sports betting power with up to ₺12,500 bonus plus 500 free bets. Perfect for football, basketball, and all your favorite sports!
+                    </div>
+                    <a href="#" class="btn-primary">Claim Sports Bonus</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+           
+            
+          
+            
+            <div class="footer-bottom">
+                 
+            <a href="#" class="logo">BETOFFICE</a>
+              <div class="footer-logos">
+                <img src="./images/dmca.webp" alt="DMCA" class="footer-logo">
+                <img src="./images/gcb.webp" alt="GCB" class="footer-logo">
+            </div>
+      
+                <p><strong>CURAÇAO EGAMING LICENSE</strong></p>
+                <p>© 2025 BetOffice. This site is operated by Hit Entertainment B.V, registered in the Commercial Register of Curaçao Chamber of Commerce and Industry with registration number 145060. License number 1668/JAZ issued by Curaçao Egaming. Authorized and regulated by the Government of Curaçao.
+                    Users must agree to this agreement to register on this website. Any updates to the General Terms and Conditions will be notified to users at least two weeks before the update takes effect. Existing users have the right to discontinue their use of our products and services at any time before the update takes effect.
+                </p> 
+                <br>
+              
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+    
+    </script>
+</body>
+</html>
