@@ -404,16 +404,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 }
 
 /* Stepper Line */
-.stepper-line {
-  position: absolute;
-  top: 45px;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, #ff6200, #ffa128, #ff6200);
-  border-radius: 2px;
-  z-index: 1;
-}
+
 
 .stepper-steps {
   display: flex;
@@ -459,12 +450,11 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 .step-content-stepper {
   max-width: 280px;
   padding: 0 15px;
-
 }
 
 .step-title-stepper {
   font-family: 'Prometo', sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: white;
   margin-bottom: 20px;
@@ -487,6 +477,8 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   animation: glowPulse 3s infinite;
   border-radius: 25px;
   font-weight: 600;
+  width: 200px;
+ 
 }
 
 
@@ -695,12 +687,35 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   }
 
   .navbar {
- 
   justify-content: left;
-  
-  
 }
+
+ .stepper-steps {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .stepper-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .step-content-stepper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .step-btn-stepper {
+    margin-top: auto; 
+  }
 }
+
+
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .hero-content-bonus {
@@ -724,6 +739,30 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
     font-size: 1.5rem;
     font-weight: 900;
     width: 10%;
+  }
+
+  .stepper-steps {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .stepper-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .step-content-stepper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .step-btn-stepper {
+    margin-top: auto; 
   }
 
   
@@ -832,4 +871,5 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   .hero-content-bonus {
     margin-bottom: 20px;
   }
+  
 }
