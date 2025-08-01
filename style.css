@@ -481,6 +481,27 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   margin-top: 60px;
 }
 
+.section-title {
+  text-align: center;
+  font-family: "Orbitron", monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6200, #ffa128);
+  border-radius: 2px;
+}
 .bonus-card {
   background: linear-gradient(135deg, #14155d, #2a5298);
   border-radius: 25px;
