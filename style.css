@@ -137,15 +137,14 @@ font-family: 'Prometo', sans-serif;
 
 /* Header/Navigation */
 .navbar {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   padding: 15px 0;
+  background-color: #0D1F4E;
+  position: relative
 }
 
 .logo {
@@ -157,66 +156,39 @@ font-family: 'Prometo', sans-serif;
   object-fit: contain;
 }
 
-.nav-buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  display: none;
-}
-
 /* Hero Section */
 .hero-section {
+  background-image: url('./images/betoffice-mobile.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 90vh;
+  width: 100%;
   position: relative;
-  width: 100%;
-  min-height: 70vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+
 }
 
-.hero-bg-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 
-.hero-bg-overlay img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-.hero-content-bonus {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  color: white;
- font-family: 'Prometo', sans-serif;
-  width: 100%;
-  margin-bottom: 40px;
-}
-
-.hero-title-bonus {
-  font-size: 1.6rem;
-  font-weight: 900;
-  animation: strokeColorChange 5s infinite;
-  text-shadow: 0 0 20px white;
-  color: white;
+.hero-buttons .btn {
+  padding: 10px 16px;
+  font-size: 1rem;
+  font-weight: 700;
   text-transform: uppercase;
+  border-radius: 30px;
+  transition: all 0.3s ease;
 }
+
 
 .hero-buttons {
   display: flex;
+  position: relative;
+  top: 510px;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 5px;
   width: 100%;
-  margin-top: 20px;
   padding: 20px 0;
 }
 
@@ -662,13 +634,17 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 /* Responsive Design */
 
 @media (min-width: 1024px) {
-  .hero-content-bonus {
-    margin-top: 80px;
-  }
+ 
+.hero-section {
+  background-image: url('./images/betoffice-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 40vh;
+  width: 100%;
+  position: relative;
 
-  .hero-title-bonus {
-    font-size: 3rem;
-  }
+}
 
   .bonus-options {
     display: flex;
@@ -718,18 +694,16 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 
 
 @media (min-width: 768px) and (max-width: 1024px) {
-  .hero-content-bonus {
-    margin-top: 80px;
-  }
 
-  .bonus-options {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-  }
-.hero-title-bonus{
+ .hero-section {
+  background-image: url('./images/betoffice-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 65vh;
+  width: 100%;
+  position: relative;
 
-    font-size: 2.5rem;
 }
   .bonus-box {
     width: 20%;
@@ -769,12 +743,8 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 }
 
 @media (max-width: 768px) {
-  .hero-section {
-    min-height: 90vh;
-  }
-  .hero-content-bonus {
-    margin-top: 90px;
-  }
+
+
 
   .section-title {
     font-size: 2.2rem;
@@ -822,21 +792,21 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
     padding: 12px 20px;
   }
 }
+@media (min-width: 441px) and (max-width: 768px){
 
-@media (max-width: 441px) {
-  .hero-section {
-    min-height: 70vh;
-  }
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-title-bonus {
-    margin-top: 30px;
-  }
+  .hero-buttons{
 
-  .hero-content-bonus {
-    margin-top: 90px;
+    top: 580px;
   }
+}
+
+@media (min-width: 344px) and (max-width: 441px) {
+
+.hero-buttons{
+
+    top: 580px;
+  }
+  
   .bonus-amount {
     font-size: 3rem;
   }
@@ -864,12 +834,5 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   }
 }
 
-@media (max-width: 376px) {
-  .hero-section {
-    height: 95vh;
-  }
-  .hero-content-bonus {
-    margin-bottom: 20px;
-  }
-  
-}
+
+
