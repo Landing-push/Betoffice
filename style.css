@@ -587,7 +587,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   gap: 10px;
 }
   .hero-section {
-    background-image: url('./images/betoffice-desktop.webp');
+    background-image: url('./images/betoffice-desktop.png');
     background-size: cover; 
     background-position: center top;
     background-repeat: no-repeat;
@@ -666,7 +666,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   gap: 10px;
 }
  .hero-section {
-  background-image: url('./images/betoffice-desktop.webp');
+  background-image: url('./images/betoffice-desktop.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
