@@ -36,47 +36,17 @@ font-family: 'Prometo', sans-serif;
 }
 
 /* Animations */
-@keyframes strokeColorChange {
-  
-  30%,
-  100% {
-    -webkit-text-stroke-color: white;
-    text-shadow: 0 0 20px #fea703;
-  }
-  70% {
-    -webkit-text-stroke-color: white;
-    text-shadow: 0 0 30px white;
-  }
+
+
+
+@keyframes pulseLeft {
+  0% { box-shadow: 0 0 5px #fea703, 0 0 10px #fea703; }
+  100% { box-shadow: 0 0 10px #fea703, 0 0 20px #fea703, 0 0 35px #fea703; }
 }
 
-@keyframes borderColorChange {
-  0% {
-    border-color: #00bfff; /* Sky Blue */
-  }
-  33% {
-    border-color: #ffdf00; /* Gold Yellow */
-  }
-  66% {
-    border-color: #cec4ff; /* Soft Purple */
-  }
-  100% {
-    border-color: #ff6200; /* Sky Blue again for loop */
-  }
-}
-
-@keyframes borderColorRight {
-  0% {
-    border-color: #cec4ff; /* Soft Purple */
-  }
-  33% {
-    border-color: #00bfff; /* Sky Blue */
-  }
-  66% {
-    border-color: #ff6200; /* Orange */
-  }
-  100% {
-    border-color: #ffdf00; /* Gold Yellow */
-  }
+@keyframes pulseRight {
+  0% { box-shadow: 0 0 5px #0D1F4E, 0 0 10px #0D1F4E; }
+  100% { box-shadow: 0 0 15px #0D1F4E, 0 0 30px #0D1F4E, 0 0 45px #0D1F4E; }
 }
 
 @keyframes slideInLeft {
@@ -122,6 +92,8 @@ font-family: 'Prometo', sans-serif;
     transform: scale(1.05);
   }
 }
+
+
 
 @keyframes lineGlow {
   0%,
@@ -174,6 +146,7 @@ font-family: 'Prometo', sans-serif;
   height: 80vh;
   width: 100%;
   position: relative;
+ 
 
 }
 
@@ -184,6 +157,14 @@ font-family: 'Prometo', sans-serif;
   text-transform: uppercase;
   border-radius: 30px;
   transition: all 0.3s ease;
+}
+
+.hero-buttons .left{
+   animation: pulseLeft 2.5s infinite alternate;;
+}
+
+.hero-buttons .right{
+   animation: pulseRight 2.5s infinite alternate;;
 }
 
 
@@ -197,6 +178,7 @@ font-family: 'Prometo', sans-serif;
   gap: 5px;
   width: 100%;
   padding: 20px 0;
+  
 }
 
 .hero-buttons .btn {
