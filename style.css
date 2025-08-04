@@ -156,19 +156,26 @@ font-family: 'Prometo', sans-serif;
   object-fit: contain;
 }
 
+.nav-buttons{
+
+  display: none;
+}
+
+.nav-buttons .btn{
+  padding: 8px 16px;
+}
+
 /* Hero Section */
 .hero-section {
   background-image: url('./images/betoffice-mobile.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 90vh;
+  height: 80vh;
   width: 100%;
   position: relative;
 
 }
-
-
 
 .hero-buttons .btn {
   padding: 10px 16px;
@@ -183,7 +190,7 @@ font-family: 'Prometo', sans-serif;
 .hero-buttons {
   display: flex;
   position: relative;
-  top: 510px;
+  top: 68vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -226,61 +233,6 @@ font-family: 'Prometo', sans-serif;
   align-items: center;
 }
 
-/* .bonus-box.left {
-  background: none;
-} */
-
-.bonus-box.right {
-  animation: borderColorRight 3s infinite ease-in-out;
-   padding-bottom: 10px;
-  
-}
-
-.bonus-rate {
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #fea703;
-  text-shadow: 0 0 50px #fea703;
-}
-
-.bonus-amount {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: white;
-  margin-top: 10px;
-  line-height: 1.4;
-}
-
-.freebet {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #00e6e6;
-  display: block;
-  margin-top: 5px;
-  border: 1px solid white;
-  border-bottom: none;
-  border-right: none;
-  border-left: none;
-}
-
-.bonus-or {
-  font-size: 1.5rem;
-  font-weight: 900;
-  color: #00279c;
-  width: 20%;
-}
-
-.bonus-value {
-  background: #00279c;
-  color: white;
-  padding: 8px 8px;
-  font-weight: bold;
-  font-size: 1.2rem;
-  border-radius: 4px;
-  display: inline-block;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  
-}
 
 /* Buttons */
 
@@ -313,7 +265,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   background: transparent;
   color: white;
   padding: 18px 20px;
-  border: 2px solid #ffa128;
+  border: 1px solid #ffa128;
   border-radius: 50px;
   font-size: 1.2rem;
   font-weight: 700;
@@ -322,6 +274,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  background: #0D1F4E;
 }
 
 .btn-secondary:hover {
@@ -471,7 +424,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 
 .bonus-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));
+  grid-template-columns: repeat(auto-fit, minmax(50%, 2fr));
   gap: 40px;
   margin-top: 60px;
 }
@@ -632,20 +585,43 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 }
 
 /* Responsive Design */
-
+/* Laptop Screen */
 @media (min-width: 1024px) {
  
-.hero-section {
-  background-image: url('./images/betoffice-desktop.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 40vh;
+ .navbar {
   width: 100%;
-  position: relative;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #0D1F4E;
+  position: relative
 }
 
+
+.nav-buttons{
+  display: flex;
+  margin-right: 20px;
+  gap: 10px;
+}
+  .hero-section {
+    background-image: url('./images/betoffice-desktop.png');
+    background-size: cover; 
+    background-position: center top;
+    background-repeat: no-repeat;
+     background-size: 100% 100%;
+   height: 90vh;
+    width: 100%;
+ 
+  }
+
+.hero-buttons{
+  display: none;
+}
+.bonus-grid {
+  grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));
+  
+}
   .bonus-options {
     display: flex;
     flex-direction: row;
@@ -661,10 +637,6 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
     font-weight: 900;
     width: 10%;
   }
-
-  .navbar {
-  justify-content: left;
-}
 
  .stepper-steps {
     display: flex;
@@ -692,18 +664,38 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 }
 
 
-
+/*Tablet screen*/
 @media (min-width: 768px) and (max-width: 1024px) {
 
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 15px 0;
+  background-color: #0D1F4E;
+  position: relative
+}
+
+.nav-buttons{
+  display: flex;
+  margin-right: 20px;
+  gap: 10px;
+}
  .hero-section {
   background-image: url('./images/betoffice-desktop.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 65vh;
+  height: 70vh;
   width: 100%;
   position: relative;
 
+}
+
+.hero-buttons{
+  display: none;
 }
   .bonus-box {
     width: 20%;
@@ -738,12 +730,59 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   .step-btn-stepper {
     margin-top: auto; 
   }
+ .section-title {
+    font-size: 2.2rem;
+  }
+
+  /* Stepper Mobile */
+  .steps-main-title {
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+  }
+
+  .stepper-steps {
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .stepper-line {
+    display: none;
+  }
+
+  .step-circle {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .step-content-stepper {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 
   
+  .step-title-stepper {
+    font-size: 1.4rem;
+  }
+
+  .step-description-stepper {
+    font-size: 1rem;
+  }
+
+  .step-btn-stepper {
+    font-size: 0.9rem;
+    padding: 12px 20px;
+  }
+  
+  .bonus-grid {
+  grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));
+  
+}
 }
 
-@media (max-width: 768px) {
-
+@media (max-width: 767px) {
 
 
   .section-title {
@@ -792,47 +831,39 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
     padding: 12px 20px;
   }
 }
-@media (min-width: 441px) and (max-width: 768px){
 
-  .hero-buttons{
 
-    top: 580px;
-  }
+@media (min-width: 503px) and (max-width: 767px){
+
+  .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  padding: 10px 0;
+  background-color: #0D1F4E;
+  position: relative
 }
 
-@media (min-width: 344px) and (max-width: 441px) {
+.nav-buttons{
+  display: flex;
+  margin-right: 20px;
+  gap: 10px;
+  padding: 5px 0;
+}
+ .hero-section {
+  background-image: url('./images/betoffice-desktop.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 55vh;
+  width: 100%;
+  position: relative;
+
+}
 
 .hero-buttons{
-
-    top: 580px;
-  }
-  
-  .bonus-amount {
-    font-size: 3rem;
-  }
-
-  .steps-main-title {
-    font-size: 1.8rem;
-    line-height: 1.3;
-  }
-
-  .step-circle {
-    width: 80px;
-    height: 80px;
-    font-size: 1.5rem;
-  }
-
-  .step-title-stepper {
-    font-size: 1.2rem;
-  }
-
-  .step-description-stepper {
-    font-size: 0.9rem;
-  }
-  .bonus-grid {
-    grid-template-columns: 1fr; /* One column only */
-  }
+  display: none;
 }
-
-
-
+}
