@@ -494,12 +494,11 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   gap: 10px;
 }
   .hero-section {
-    background-image: url('./images/betoffice-desktop.png');
+    background-image: url('./images/betoffice-desktop.webp');
     background-size: cover; 
     background-position: center top;
     background-repeat: no-repeat;
-     background-size: 100% 100%;
-   height: 100vh;
+   height:75vh;
     width: 100%;
  
   }
@@ -566,11 +565,11 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   gap: 10px;
 }
  .hero-section {
-  background-image: url('./images/betoffice-desktop.png');
+  background-image: url('./images/betoffice-mobile.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 120vh;
   width: 100%;
   position: relative;
 
@@ -726,11 +725,11 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   padding: 5px 0;
 }
  .hero-section {
-  background-image: url('./images/betoffice-desktop.webp');
+  background-image: url('./images/betoffice-mobile.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 55vh;
+  height: 115vh;
   width: 100%;
   position: relative;
 
