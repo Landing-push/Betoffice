@@ -72,7 +72,7 @@ font-family: 'Prometo', sans-serif;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  height: 80vh;
+  height: 73vh;
   width: 100%;
   position: relative;
  
@@ -100,7 +100,7 @@ font-family: 'Prometo', sans-serif;
 .hero-buttons {
   display: flex;
   position: relative;
-  top: 67vh;
+  top: 58vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
