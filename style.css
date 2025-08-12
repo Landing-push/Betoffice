@@ -70,7 +70,7 @@ font-family: 'Prometo', sans-serif;
 .hero-section {
   background-image: url('./images/betoffice-mobile.webp');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
   height: 80vh;
   width: 100%;
@@ -100,7 +100,7 @@ font-family: 'Prometo', sans-serif;
 .hero-buttons {
   display: flex;
   position: relative;
-  top: 68vh;
+  top: 67vh;
   flex-direction: row;
   justify-content: center;
   align-items: center;
@@ -474,8 +474,80 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 }
 
 /* Responsive Design */
+
+
+@media (min-width: 1320px){
+
+   .navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  background-color: #0D1F4E;
+  position: relative
+}
+  .hero-section {
+    background-image: url('./images/betoffice-desktop.webp');
+    background-size: cover; 
+    background-position:top center;
+    background-repeat: no-repeat;
+   height:80vh;
+    width: 100%;
+ 
+  }
+
+  .nav-buttons{
+  display: flex;
+  margin-right: 20px;
+  gap: 10px;
+}
+.hero-buttons{
+  display: none;
+}
+
+.bonus-grid {
+  grid-template-columns: repeat(auto-fit, minmax(40%, 2fr));
+  
+}
+ 
+  .bonus-box {
+    width: 20%;
+  }
+
+ .stepper-steps {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+   
+    width: 100%;
+  }
+
+  .stepper-step {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+        /* From https://css.glass */
+
+  }
+
+  .step-content-stepper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .step-btn-stepper {
+    margin-top: auto; 
+  }
+}
 /* Laptop Screen */
-@media (min-width: 1024px) {
+
+
+
+@media (min-width: 1024px) and (max-width: 1320px) {
  
  .navbar {
   width: 100%;
@@ -496,9 +568,9 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   .hero-section {
     background-image: url('./images/betoffice-desktop.webp');
     background-size: cover; 
-    background-position: center top;
+    background-position:top center;
     background-repeat: no-repeat;
-   height:75vh;
+   height:40vh;
     width: 100%;
  
   }
@@ -546,7 +618,7 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 
 
 /*Tablet screen*/
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
 
 .navbar {
   width: 100%;
@@ -565,11 +637,11 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
   gap: 10px;
 }
  .hero-section {
-  background-image: url('./images/betoffice-mobile.webp');
+  background-image: url('./images/betoffice-desktop.webp');
   background-size: cover;
-  background-position: center;
+  background-position: left center;
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 40vh;
   width: 100%;
   position: relative;
 
@@ -727,9 +799,9 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
  .hero-section {
   background-image: url('./images/betoffice-mobile.webp');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   background-repeat: no-repeat;
-  height: 115vh;
+  height: 120vh;
   width: 100%;
   position: relative;
 
