@@ -423,6 +423,12 @@ background: linear-gradient(45deg, #ff6200 10%, #fea703 90%);
 
 }
 
+.footer-logo-license{
+  max-width: 80px;
+  height: 40px;
+
+}
+
 /* Responsive Design */
 
 
